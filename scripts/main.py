@@ -385,7 +385,6 @@ if __name__ == "__main__":
     parse.add_argument("--tgt_pretrain_dataset_name", default=None, type=str)
     parse.add_argument("--train_data_path", default=None, type=str)
     parse.add_argument("--eval_data_path", default=None, type=str)
-    parse.add_argument("--log_path", default=None, type=str)
     parse.add_argument("--run_path", default=None, type=str)
     parse.add_argument("--output_dir", default="../checkpoints/", type=str)
     parse.add_argument("--optimizer", default="adam", type=str)

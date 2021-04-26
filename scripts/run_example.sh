@@ -1,7 +1,6 @@
 TRAIN_FILE_PATH=/your/path/to/train.txt
 EVAL_FILE_PATH=/your/path/to/eval.txt
 OUTPUT_DIR=../checkpoints/
-LOG_PATH=../logs/
 RUN_PATH=../runs/
 MODEL_PATH=../checkpoints/xxx/
 # python main.py \
@@ -12,7 +11,6 @@ CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node=1 --m
     --train_data_path $TRAIN_FILE_PATH \
     --eval_data_path $EVAL_FILE_PATH \
     --output_dir $OUTPUT_DIR\
-    --log_path $LOG_PATH \
     --run_path $RUN_PATH \
     --finetune_lr 3e-5 \
     --lr 1e-4 \
