@@ -273,9 +273,9 @@ def train(
             step += 1
             model.zero_grad()
             if args.ngpu > 1:
-                 reduced_loss = reduce_tensor(loss).cpu().item()
+                reduced_loss = reduce_tensor(loss).cpu().item()
             else:
-                 reduced_loss = loss.cpu().item()
+                reduced_loss = loss.cpu().item()
             if local_rank == 0 or local_rank == -1:
                 lr, finetune_lr = scheduler.get_lr()[0], scheduler.get_lr()[1]
                 print(
